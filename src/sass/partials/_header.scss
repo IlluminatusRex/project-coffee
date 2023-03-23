@@ -1,0 +1,127 @@
+.header {
+  padding: ($base-size * 5) 0 ($base-size * 8) 0;
+  background-image: url('../../images/background.png');
+  background-size: cover;
+  height: 80vh;
+  color: $color-light;
+  padding-top: 20px;
+  
+
+  &__wrapper {
+    position: relative;
+  }
+
+}
+
+.header::before {
+  content: '';
+  width: 100%;
+  height: 80vh;
+  background: $color-dark;
+  opacity: 0.8;
+  text-align: right;
+  position: absolute;
+  transform: translateY(-20px);
+}
+
+.logo {
+  display: inline-block;
+  line-height: 1;
+
+  &__title {
+    margin: 0 0 $base-size 0;
+    font-size: ($base-size * 2);
+    font-family: $font-header;
+    
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 900;
+
+    span {
+      font-weight: $font-bold;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: ($base-size * 1);
+    
+    font-style: normal;
+    letter-spacing: 5px;
+    font-weight: 900;
+  }
+}
+
+.main-nav {
+  position: absolute;
+  padding-top: 80px;
+  
+  @include flex(row, flex-start, flex-start);
+  top: ($base-size * -8);
+  right: ($base-size * -8);
+
+  a {
+    @extend .h2;
+    color: $color-main;
+    text-decoration: none;
+    margin-right: ($base-size * 2);
+    text-align: center;
+    padding: $base-size ($base-size * 2);
+    background: transparent;
+    font-weight: 200;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+
+    &.active {
+      background: lighten($color-dark, 75%);
+    }
+  }
+}
+
+.header h3 {
+  padding-top: 20%;
+  color: $color-baner;
+  margin: 0 0 $base-size 0;
+  font-size: ($base-size * 4);
+  font-family: $font-header;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 900;
+}
+
+.header h3:nth-of-type(2n) {
+  padding-top: 0;
+  padding-left: 20%;
+}
+
+.discover::before {
+  position: absolute;
+  content: '';
+  bottom: 35px;
+  left: 50%;
+  width: 250px;
+  height: 3px;
+  transform: translateX(-50%);
+  background-color: $color-baner;
+  margin-bottom: 25vh;
+}
+
+.discover h4{
+  padding-top: 20vh;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: ($base-size * 1);
+  letter-spacing: 4px;
+  color: $color-main;
+}
+
+.discover i{
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: black;
+  border-radius: 50%;
+  display: block;
+}
+
